@@ -7,11 +7,18 @@ h1 {
     text-align: center;
     color: #333;
 }
-h2 {
+h2.status-header {
     color: #444;
     margin-top: 20px;
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
+}
+h3.trade-header {
+    color: #555;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
 }
 table {
     width: 100%;
@@ -49,14 +56,6 @@ tr.purple:nth-child(even) { background-color: rgba(204, 153, 255, 0.8); }
 tr.green:nth-child(even) { background-color: rgba(153, 255, 153, 0.8); }
 tr:hover {
     background-color: #f0f0f0;
-}
-tr.group-header {
-    background-color: #e0e0e0;
-    font-weight: bold;
-}
-tr.group-header td {
-    padding: 8px;
-    text-align: center;
 }
 .legend {
     margin-bottom: 20px;
@@ -102,11 +101,11 @@ tr.group-header td {
 .toggle-btn:hover {
     background-color: #555;
 }
-.section-content {
+.section-content, .trade-content {
     transition: max-height 0.3s ease;
     overflow: hidden;
 }
-.section-content.collapsed {
+.section-content.collapsed, .trade-content.collapsed {
     max-height: 0;
 }
 @media print {
@@ -114,7 +113,7 @@ tr.group-header td {
         box-shadow: none;
         page-break-inside: avoid;
     }
-    h2 {
+    h2.status-header {
         page-break-before: always;
     }
     .toggle-btn, .filter {

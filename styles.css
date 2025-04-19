@@ -109,10 +109,6 @@ tr.group-header td {
 .section-content.collapsed {
     max-height: 0;
 }
-td[contenteditable="true"] {
-    background-color: #f0f0f0;
-    cursor: text;
-}
 @media print {
     table {
         box-shadow: none;
